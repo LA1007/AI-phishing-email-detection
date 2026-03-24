@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pkl
+*.csv
+data/
+models/
+.DS_Store
+.vscode/
+.idea/
+stgfdhj
+tempCodeRunnerFile.python
+requirements/app.py

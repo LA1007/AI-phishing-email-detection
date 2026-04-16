@@ -62,7 +62,8 @@ pip install pandas scikit-learn transformers torch tqdm xgboost
 
 ---
 
-🧪 Usage
+## 🧪 Usage
+
 Run these commands in order:
 
 ```bash
@@ -78,7 +79,8 @@ python src/predict.py
 
 ---
 
-⚙️ Configuration
+## ⚙️ Configuration
+
 At the top of preprocess.py and evaluate.py:
 
 | Setting | Options | Description |
@@ -90,6 +92,7 @@ Note: Use FILTER_EMPTY_EMAILS = True unless you have a specific reason to keep p
 ---
 
 📁 Dataset Format
+
 Place your dataset as data/Phishing_Email.csv with:
 
 | Column | Values |

@@ -11,3 +11,6 @@ models/
 stgfdhj
 tempCodeRunnerFile.python
 requirements/app.py
+error_analysis.txt
+evaluation_results.txt
+filtered_samples.txt

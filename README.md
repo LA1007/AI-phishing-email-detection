@@ -15,35 +15,12 @@ This project detects phishing emails using a layered approach that balances spee
 
 | Layer | Method | Role |
 |-------|--------|------|
-| **Layer 1** | Rule-based keyword matching + whitelist | Quick filtering (1.0% of emails) |
-| **Layer 2** | TF-IDF (unigram + bigram) + Logistic Regression | Main workhorse (96.9% of emails) |
-| **Layer 3** | DistilBERT semantic understanding | Final judge for edge cases (2.2% of emails) |
+| **Layer 1** | Rule-based keyword matching + whitelist | Quick filtering |
+| **Layer 2** | TF-IDF (unigram + bigram) + Logistic Regression | Main workhorse |
+| **Layer 3** | DistilBERT semantic understanding | Final judge for edge cases |
 
 ---
 
-## 📊 Results
-
-### Model Comparison (Layer 2)
-
-| Model | Accuracy | Training Time |
-|-------|----------|---------------|
-| **Logistic Regression** | **98.19%** | **2.43s** |
-| Random Forest | 97.22% | 17.18s |
-| Calibrated RF | 97.19% | 65.01s |
-| XGBoost | 95.61% | 20.67s |
-
-### Three-Layer Overall Performance
-
-| Metric | Value |
-|--------|-------|
-| **Overall accuracy** | **99%** |
-| False Positives | 90 |
-| False Negatives | 59 |
-| Layer 1 handled | 1.0% |
-| Layer 2 handled | 96.9% |
-| Layer 3 handled | 2.2% |
-
----
 
 ## 🛠️ Installation
 

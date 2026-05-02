@@ -4,10 +4,10 @@ import pickle
 import re
 
 # ========== Configuration ==========
-TEXT_COLUMN = 'Email Text'
-LABEL_COLUMN = 'Email Type'
-SAFE_LABEL = 'Safe Email'
-PHISHING_LABEL = 'Phishing Email'
+TEXT_COLUMN = 'text_combined'      
+LABEL_COLUMN = 'label'             
+SAFE_LABEL = 0          
+PHISHING_LABEL = 1                 
 
 # ========== DATA CLEANING OPTION ==========
 # Set to True to filter out 'empty' placeholder emails, False to keep them
@@ -49,7 +49,7 @@ def preprocess_data(input_file, output_file):
         stop_words='english'
     )
     X = vectorizer.fit_transform(data[TEXT_COLUMN]).toarray()
-    y = data[LABEL_COLUMN].map({SAFE_LABEL: 0, PHISHING_LABEL: 1}).values
+    y = data[LABEL_COLUMN].values
 
     with open(output_file, "wb") as f:
         pickle.dump((X, y, vectorizer), f)

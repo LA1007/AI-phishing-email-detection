@@ -7,10 +7,11 @@ from tqdm import tqdm
 import re
 
 # ========== Configuration ==========
-TEXT_COLUMN = 'Email Text'
-LABEL_COLUMN = 'Email Type'
-SAFE_LABEL = 'Safe Email'
-PHISHING_LABEL = 'Phishing Email'
+TEXT_COLUMN = 'text_combined'      
+LABEL_COLUMN = 'label'             
+SAFE_LABEL = 0          
+PHISHING_LABEL = 1                 
+
 
 # Set to True to filter out 'empty' placeholder emails, False to keep them
 FILTER_EMPTY_EMAILS = False   # ← change this
